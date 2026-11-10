@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Codex 皮肤廊 · DreamSkin</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主题列表</a>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Codex DreamSkin 首页"><span class="brand-mark">瓷</span><span>Codex 皮肤廊<small>DreamSkin · 私人的配色收藏</small></span></a>
+  <div class="sidebar-label">我的空间</div>
+  <nav aria-label="主题导航">
+    <button id="nav-online" class="nav active" aria-current="page"><span>◈</span> 在线主题 <small>发现</small></button>
+    <button id="nav-saved" class="nav"><span>▦</span> 已保存 <small id="saved-count">—</small></button>
+  </nav>
+  <section class="current-panel" aria-labelledby="current-label"><span class="eyebrow" id="current-label">正在使用</span><div class="current-swatch" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h2 id="current-name">正在读取…</h2><p id="current-note">从本地主题库读取真实状态</p></section>
+  <div class="sidebar-bottom"><div id="service" class="service" role="status">正在连接本地服务</div><button id="reconnect" class="text-button">重新连接</button><p>给专注留一点好颜色。</p></div>
+</aside>
+<main id="main" tabindex="-1">
+  <header class="page-header"><div><span class="eyebrow">THEME COLLECTION / 主题收藏</span><h1 id="page-title">让工作台，清新一点。</h1><p id="page-description">挑选喜欢的配色，慢慢收进你的 Codex。</p></div><a class="site-link" href="https://dreamskin.cc/gallery" target="_blank" rel="noopener noreferrer">官方主题库 ↗</a></header>
+  <section class="intro" id="intro"><div class="intro-art" aria-hidden="true"><span>青</span></div><div><span class="eyebrow">一份配色，一种心境</span><h2>雨过青瓷，光落案头。</h2><p>下载只保存主题，不会重启 Codex。准备好时，再从「已保存」中应用。</p></div><span class="intro-number" aria-hidden="true">01 / 慢慢挑选</span></section>
+  <section class="task-panel" id="task-panel" hidden aria-labelledby="task-title"><div class="task-heading"><strong id="task-title">主题任务</strong><span id="task-state" class="badge"></span></div><p id="task-message" role="status" aria-live="polite"></p><progress id="task-progress" aria-label="任务进度"></progress><div class="task-footer"><span id="task-phase"></span><button id="retry-task" hidden>重试任务</button></div></section>
+  <section id="online-tools" aria-label="在线主题工具">
+    <form id="link-form" class="link-form"><label for="theme-link">已有主题链接？</label><input id="theme-link" type="url" placeholder="https://dreamskin.cc/themes/ver_…" autocomplete="off" required><button id="lookup" type="submit">读取主题</button></form>
+    <p id="link-message" class="hint" role="status"></p><div id="link-result"></div>
+    <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索主题名称或作者" placeholder="搜索主题名称 / 作者" autocomplete="off"></label><label class="sort">排序<select id="sort"><option value="latest">最新发布</option><option value="popular">下载热度</option></select></label><button id="refresh">↻ 刷新</button></div>
+  </section>
+  <div class="collection-heading"><h2 id="collection-title">发现主题</h2><span id="collection-status" role="status" aria-live="polite">正在准备主题…</span></div>
+  <div id="notice" class="notice" role="status" hidden></div>
+  <section class="grid" id="grid" aria-label="主题列表" aria-busy="false"></section>
+  <div class="more"><button id="load-more" hidden>加载更多主题</button><button id="retry-list" hidden>重新加载</button></div>
+  <footer><span>Codex × DreamSkin</span><span>主题版权归各作者所有 · 收藏你的工作日常</span></footer>
+</main>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><form method="dialog"><span class="eyebrow">请确认</span><h2 id="confirm-title"></h2><p id="confirm-message"></p><div class="dialog-actions"><button value="cancel">取消</button><button id="confirm-ok" class="primary" value="confirm">确认</button></div></form></dialog>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿data/
+**/data/
+**/engine-test-*/
+**/engine-security-*/
+**/.browser-check/
+**/__pycache__/
+**/browser-profile/
+**/backup/
+*.log
+*.zip
+.env
+.env.*
+node_modules/
